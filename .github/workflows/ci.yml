@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 20
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - name: Use Node.js with Latest Version
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'latest'
       - name: npm install and test
         run: |
           npm install
