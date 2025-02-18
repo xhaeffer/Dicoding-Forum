@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest --no-watch",
-    "e2e": "cypress run"
+    "lint": "eslint .",
+    "test": "vitest",
+    "e2e": "cypress run",
+    "ci:test": "vitest --no-watch && start-server-and-test dev http-get://localhost:5173 e2e"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -47,6 +48,7 @@
     "globals": "^15.14.0",
     "jsdom": "^26.0.0",
     "prettier": "3.5.0",
+    "start-server-and-test": "^2.0.10",
     "vite": "^6.1.0",
     "vitest": "^3.0.5"
   }
