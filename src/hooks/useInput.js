@@ -4,10 +4,10 @@ const useInput = (defaultValue) => {
   const [value, setValue] = useState(defaultValue);
 
   const handleValueChange = (eventOrValue) => {
-    if (typeof eventOrValue === "strings") {
+    if (typeof eventOrValue === "string") {
       setValue(eventOrValue);
     } else {
-      setValue(eventOrValue.target.values);
+      setValue(eventOrValue.target.value);
     }
   };
 
